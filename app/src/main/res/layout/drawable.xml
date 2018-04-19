@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/waaa">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/my_pocket"
+        android:typeface="sans"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/background_light"
+        android:textSize="50sp"
+        android:id="@+id/textView9"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/copy_right_modcru_co"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:textSize="20sp"
+        android:id="@+id/textView10"
+        android:textColor="#001"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+
+
+
+
+</RelativeLayout>

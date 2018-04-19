@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/l1"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:id="@+id/drawerLayout"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
+
+        <!-- activity view -->
+        <!--android:layout_gravity="center_horizontal" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <!-- ads -->
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1848641763633479/2282524940">
+        </com.google.android.gms.ads.AdView>
+
+        <!-- ads -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView3"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:src="@drawable/oc"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/i_have_in_my_pocket"
+                    android:padding="5dp"
+                    android:textSize="20sp"
+                    android:typeface="sans"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/MyMoney"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar3"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:background="#00000000"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="30sp"
+                    android:textStyle="italic|bold"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/take_in"
+                    android:typeface="sans"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textAllCaps="true"
+                    android:id="@+id/textView"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/price"
+                    android:typeface="sans"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/textView3" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/_1234"
+                    android:inputType="number"
+                    android:textSize="15sp"
+                    android:textColorHint="@android:color/holo_blue_dark"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:id="@+id/takeNum" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/from"
+                    android:typeface="sans"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:id="@+id/textView2" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/takeFrom"
+                    android:hint="@string/name"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:textSize="15sp"
+                    android:textColorHint="@android:color/holo_blue_dark"
+                    android:padding="10dp"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/about"
+                    android:typeface="sans"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:id="@+id/textView4" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/takeNotes"
+                    android:hint="@string/notes"
+                    android:textSize="15sp"
+                    android:textColorHint="@android:color/holo_blue_dark"
+                    android:padding="10dp"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:layout_gravity="center_horizontal" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:padding="10dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/add"
+                    android:typeface="sans"
+                    android:id="@+id/add"
+                    android:background="@android:color/holo_blue_dark"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    android:layout_marginBottom="5dp"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_gravity="center_horizontal" />
+
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textSize="30sp"
+                    android:textStyle="italic|bold"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/give_out"
+                    android:typeface="sans"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/textView5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/price"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/textView6" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/giveNum"
+                    android:inputType="number"
+                    android:textSize="15sp"
+                    android:textColorHint="@android:color/holo_blue_dark"
+                    android:padding="10dp"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:maxLines="1"
+                    android:hint="@string/_1234"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/to"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/textView7" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/giveTo"
+                    android:inputType="textPersonName"
+                    android:textSize="15sp"
+                    android:textColorHint="@android:color/holo_blue_dark"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:hint="@string/name"
+                    android:padding="10dp"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/about"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/textView8" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/giveNotes"
+                    android:textSize="15sp"
+                    android:textColorHint="@android:color/holo_blue_dark"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:hint="@string/notes"
+                    android:padding="10dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/give"
+                    android:typeface="sans"
+                    android:id="@+id/give"
+                    android:background="@android:color/holo_blue_dark"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.42"
+                    android:layout_height="0dp" />
+
+            </LinearLayout>
+        </ScrollView>
+        </LinearLayout>
+        <!--android:background="#fff"-->
+        <!-- navigation drawer -->
+        <RelativeLayout
+            android:layout_gravity="left|start"
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/left_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:typeface="sans"
+                android:divider="#eee"
+                android:background="#fff"
+                android:dividerHeight="1dp" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme"
+    android:background="@android:color/background_light"
+    tools:context="com.example.moody.mybock.allOut">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:id="@+id/drawerLayout"
+        android:layout_height="match_parent"
+        android:background="@drawable/kk">
+
+    <!-- activity view -->
+    <!--android:layout_gravity="center_horizontal" -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/listViewG"
+        android:layout_above="@+id/allout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_all"
+        android:ellipsize="middle"
+        android:id="@+id/alldelG"
+        android:layout_gravity="bottom"
+        android:layout_alignBottom="@+id/listViewG"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:padding="5dp"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/sum"
+        android:id="@+id/sumG"
+        android:layout_above="@+id/alldelG"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:layout_alignLeft="@+id/alldelG" />
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/allout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1848641763633479/8619776546"/>
+    </RelativeLayout>
+        <!--android:background="#fff"-->
+        <!-- navigation drawer -->
+        <RelativeLayout
+            android:layout_gravity="left|start"
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/left_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#eee"
+                android:background="#fff"
+                android:dividerHeight="1dp" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</LinearLayout>
